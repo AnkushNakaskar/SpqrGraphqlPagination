@@ -35,7 +35,7 @@ public class ArticleService {
     @Autowired
     private CommentRepository commentRepository;
 
-    public Page<Article> articles(@GraphQLArgument(name = "first") int first, @GraphQLArgument(name = "after") String after) {
+    public Page<Article> articles(@GraphQLArgument(name = "first") int first, @GraphQLArgument(name = "after",defaultValue = "1") String after) {
         log.info("Fetching all the articles ....!!!!");
         Long offset = Long.parseLong(after);
         final List<Article> pages = articleRepository.findByIdGreaterThan(offset, PageRequest.of(0, first));

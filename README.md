@@ -2,11 +2,15 @@
 * First ,I would suggest read the difference between cursor and offset based pagination
     * https://dev.to/jackmarchant/offset-and-cursor-pagination-explained-b89
     * https://stackoverflow.com/questions/51795299/graphql-pagination-cursor-vs-offset
+    * https://graphql.org/learn/pagination/
+    * https://codeburst.io/graphql-pagination-by-example-part-3-e010d9baa126
+    * https://stackoverflow.com/questions/44574964/graphql-how-to-implement-pagination-with-graphql-java
     
-* You can see the Article service h
+* You can see the Article service
     * check method for articles ,It has below details
         * Check input params (first : it signify the limit the number of record , after : It is the cursor from which we want record)
         * I had fit this approached in spring data jpa.
+    * You can see that,I have provided the default value in graph arguments .So sometime if we dont provide,It will check that value.
 * You need to have proper input GraphQL query to get records.
     * I have attached the input json example for it.
     ````
